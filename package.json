@@ -1,0 +1,82 @@
+{
+  "name": "react-feedback",
+  "version": "1.0.0",
+  "description": "react-feedback",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yiluxiangbei87110/react-feedback.git"
+  },
+  "keywords": [
+    "react-feedback"
+  ],
+  "author": "Felix",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yiluxiangbei87110/react-feedback/issues"
+  },
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "predeploy": "npm run build && cd example && npm run build",
+    "deploy": "gh-pages -d ./example/dist"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "module": "dist/react-feedback.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/react-feedback.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/react-feedback.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.6.0",
+    "@types/react": "^16.9.50",
+    "@types/react-dom": "^16.9.8",
+    "classnames": "^2.2.6",
+    "husky": "^4.3.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "size-limit": "^4.6.0",
+    "tsdx": "^0.14.0",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "@types/classnames": "^2.2.10",
+    "@types/jest": "^26.0.14",
+    "gh-pages": "^3.1.0",
+    "vue-mobile-swiper": "^1.0.1"
+  }
+}
